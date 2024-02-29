@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Register = () => {
+const Register = () => {
   return (
     <>
       <form>
@@ -17,3 +17,5 @@ export const Register = () => {
     </>
   );
 };
+
+export default Register;

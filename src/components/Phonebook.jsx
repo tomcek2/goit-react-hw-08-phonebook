@@ -1,21 +1,23 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 
-import { Contacts } from 'pages/Contacts';
 import { Navigation } from './Navigation';
-import { Login } from 'pages/Login';
-import { Home } from 'pages/Home';
-import { Register } from 'pages/Register';
+
+const Home = lazy(() => import('pages/Home'));
+const Login = lazy(() => import('pages/Login'));
+const Register = lazy(() => import('pages/Register'));
+const Contacts = lazy(() => import('pages/Contacts'));
 
 export const Phonebook = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Navigation />}>
-          <Route index elemnet={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="*" element={<Navigation />} />
+          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </div>
