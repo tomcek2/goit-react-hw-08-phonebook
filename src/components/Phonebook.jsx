@@ -2,10 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 
 import { Navigation } from './Navigation';
+import Register from 'pages/Register';
 
 const Home = lazy(() => import('pages/Home'));
 const Login = lazy(() => import('pages/Login'));
-const Register = lazy(() => import('pages/Register'));
 const Contacts = lazy(() => import('pages/Contacts'));
 
 export const Phonebook = () => {

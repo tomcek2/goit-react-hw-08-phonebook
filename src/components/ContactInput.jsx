@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { addContact } from '../redux/operations';
-import { selectContact } from '../redux/selectors';
+import { addContact } from '../redux/contacts/operations';
+import { selectContact } from '../redux/contacts/selectors';
 
 import { NewContactLabel, Input } from 'components/Styles.styled';
 
