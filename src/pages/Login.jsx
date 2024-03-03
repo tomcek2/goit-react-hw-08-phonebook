@@ -1,23 +1,19 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useRef } from 'react';
 import { login } from '../redux/auth/authOperations';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const nameRef = useRef();
-  const passRef = useRef();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+    const loginData = {
+      email: form.elements.email.value,
+      password: form.elements.password.value,
+    };
 
-    dispatch(
-      login({
-        name: nameRef.current.value.trim(),
-        password: passRef.current.value.trim(),
-      })
-    );
+    dispatch(login(loginData));
     form.reset();
   };
 
@@ -25,12 +21,12 @@ const Login = () => {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" ref={nameRef} required />
+          Email:
+          <input type="text" name="email" required />
         </label>
         <label>
           Password:
-          <input type="password" ref={passRef} required />
+          <input type="password" name="password" required />
         </label>
         <button type="submit">Login</button>
       </form>
