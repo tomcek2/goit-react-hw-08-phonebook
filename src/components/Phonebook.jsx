@@ -20,6 +20,7 @@ export const Phonebook = () => {
 
   useEffect(() => {
     dispatch(refreshUser());
+    // eslint-disable-next-line
   }, []);
 
   return isRefreshing ? (
