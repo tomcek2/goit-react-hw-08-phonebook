@@ -12,7 +12,7 @@ import {
 } from 'redux-persist';
 
 import { contactReducer } from './contacts/contactSlice';
-import { filtersReducer } from './contacts/filterSlice';
+import { filtersReducer } from './filterSlice';
 import { authReducer } from './auth/authSlice';
 
 const authPersistConfig = {

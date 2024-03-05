@@ -4,9 +4,12 @@ import { Filter } from 'components/Filter';
 import { ContactList } from 'components/ContactList';
 import { ContactInput } from 'components/ContactInput';
 
-import { fetchContacts } from '../redux/contacts/operations';
+import { fetchContacts } from '../redux/contacts/contactOperations';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectError } from '../redux/contacts/selectors';
+import {
+  selectIsLoading,
+  selectError,
+} from '../redux/contacts/contactSelectors';
 
 const Contacts = () => {
   const dispatch = useDispatch();
