@@ -1,12 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import {
-  Box,
-  Input,
-  FormControl,
-  InputGroup,
-  FormLabel,
-} from '@chakra-ui/react';
+import { Box, Input, FormControl, FormLabel } from '@chakra-ui/react';
 
 import { setFilter } from '../redux/filterSlice';
 

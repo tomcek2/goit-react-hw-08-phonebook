@@ -1,15 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  Box,
-  Text,
-  Button,
-  List,
-  ListItem,
-  Heading,
-  Flex,
-  IconButton,
-} from '@chakra-ui/react';
+import { Box, Text, Button, Heading, Flex } from '@chakra-ui/react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
 import { deleteContact } from '../redux/contacts/contactOperations';
