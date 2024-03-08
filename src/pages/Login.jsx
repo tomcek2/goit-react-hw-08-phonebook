@@ -57,7 +57,7 @@ const Login = () => {
               <Input
                 type="text"
                 name="email"
-                id={generateUniqueId()} // Dodaj unikalne id
+                id={generateUniqueId()}
                 required
                 _focus={{
                   borderColor: 'orange.300',
@@ -75,7 +75,7 @@ const Login = () => {
               <Input
                 type={show ? 'text' : 'password'}
                 name="password"
-                id={generateUniqueId()} // Dodaj unikalne id
+                id={generateUniqueId()}
                 required
                 _focus={{
                   borderColor: 'orange.300',

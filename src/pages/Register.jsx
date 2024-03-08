@@ -58,7 +58,7 @@ const Register = () => {
               <Input
                 type="text"
                 name="name"
-                id={generateUniqueId()} // Dodaj unikalne id
+                id={generateUniqueId()}
                 required
                 _focus={{
                   borderColor: 'orange.300',
@@ -74,7 +74,7 @@ const Register = () => {
               <Input
                 type="email"
                 name="email"
-                id={generateUniqueId()} // Dodaj unikalne id
+                id={generateUniqueId()}
                 required
                 _focus={{
                   borderColor: 'orange.300',
@@ -90,7 +90,7 @@ const Register = () => {
               <Input
                 type={show ? 'text' : 'password'}
                 name="password"
-                id={generateUniqueId()} // Dodaj unikalne id
+                id={generateUniqueId()}
                 required
                 _focus={{
                   borderColor: 'orange.300',
