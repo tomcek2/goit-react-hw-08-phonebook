@@ -4,12 +4,10 @@ import { addContact } from '../redux/contacts/contactOperations';
 import { selectContact } from '../redux/contacts/contactSelectors';
 import {
   Input,
-  Box,
   Button,
   InputGroup,
   InputLeftElement,
   FormControl,
-  FormErrorMessage,
 } from '@chakra-ui/react';
 import { FaSquarePhone } from 'react-icons/fa6';
 import { FaUserAlt } from 'react-icons/fa';
@@ -72,42 +70,44 @@ export const ContactInput = () => {
   };
 
   return (
-    <FormControl onSubmit={handleSubmit} mb={4}>
-      <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <FaUserAlt color="teal" />
-        </InputLeftElement>
-        <Input
-          type="text"
-          placeholder="Name"
-          ref={nameRef}
-          mb={2}
-          isRequired
-          _focus={{
-            borderColor: 'orange.300',
-            boxShadow: '0 0 0 2px #F59E0B',
-          }}
-        />
-      </InputGroup>
-      <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <FaSquarePhone color="teal" />
-        </InputLeftElement>
-        <Input
-          type="tel"
-          placeholder="Phone number"
-          ref={numberRef}
-          mb={2}
-          isRequired
-          _focus={{
-            borderColor: 'orange.300',
-            boxShadow: '0 0 0 2px #F59E0B',
-          }}
-        />
-      </InputGroup>
-      <Button type="submit" colorScheme="teal" mt={3}>
-        Add Contact
-      </Button>
-    </FormControl>
+    <form onSubmit={handleSubmit}>
+      <FormControl mb={4}>
+        <InputGroup>
+          <InputLeftElement pointerEvents="none">
+            <FaUserAlt color="teal" />
+          </InputLeftElement>
+          <Input
+            type="text"
+            placeholder="Name"
+            ref={nameRef}
+            mb={2}
+            isRequired
+            _focus={{
+              borderColor: 'orange.300',
+              boxShadow: '0 0 0 2px #F59E0B',
+            }}
+          />
+        </InputGroup>
+        <InputGroup>
+          <InputLeftElement pointerEvents="none">
+            <FaSquarePhone color="teal" />
+          </InputLeftElement>
+          <Input
+            type="tel"
+            placeholder="Phone number"
+            ref={numberRef}
+            mb={2}
+            isRequired
+            _focus={{
+              borderColor: 'orange.300',
+              boxShadow: '0 0 0 2px #F59E0B',
+            }}
+          />
+        </InputGroup>
+        <Button type="submit" colorScheme="teal" mt={3}>
+          Add Contact
+        </Button>
+      </FormControl>
+    </form>
   );
 };
