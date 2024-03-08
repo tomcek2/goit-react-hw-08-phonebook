@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Helmet from 'react-helmet';
+import { Flex, Box, Heading } from '@chakra-ui/react';
 
 import { Filter } from 'components/Filter';
 import { ContactList } from 'components/ContactList';
@@ -21,13 +23,22 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h1>Contact Book</h1>
-      <ContactInput />
-      <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <ContactList />
-    </div>
+    <Box>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
+      <Heading textAlign="center" mb={5}>
+        Contact Book
+      </Heading>
+      <Flex>
+        <Box width="50%" mx={5}>
+          <ContactInput />
+          <Filter />
+          {isLoading && !error && <b>Request in progress...</b>}
+        </Box>
+        <ContactList />
+      </Flex>
+    </Box>
   );
 };
 
